@@ -1,0 +1,81 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.addOnCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--fontGrayLight);
+    cursor: pointer;
+    transition: .3s ease;
+    box-sizing: border-box;
+
+    &:hover {
+        border: 1px solid var(--bgPurple);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+
+    >div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        >div {
+
+            span {
+                // Title
+                font-weight: 500;
+                display: block;
+            }
+
+            p {
+                //  Description
+                color: var(--fontGray);
+                font-size: 0.875rem;
+            }
+        }
+    }
+
+    >span {
+        // Price
+        color: var(--bgPurple);
+        font-size: 0.875rem;
+    }
+}
+
+.selected {
+    background-color: var(--bgPurpleLighter);
+    border: 1px solid var(--bgPurple);
+}
+
+.periodSelection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .addOnCard {
+        width: 100%;
+        flex-direction: row;
+        gap: 1rem;
+
+        >div {
+            span {
+                margin: 0;
+            }
+        }
+    }
+}

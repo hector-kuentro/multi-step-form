@@ -1,0 +1,65 @@
+@mixin buttonStyles {
+    border-radius: 8px;
+    padding: 10px 1.25rem;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: .3s ease;
+    border: none;
+
+    &:focus,
+    &:focus-visible {
+        outline: 4px auto -webkit-focus-ring-color;
+    }
+}
+
+.text {
+    @include buttonStyles;
+    background-color: transparent;
+    color: var(--fontGray);
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.04);
+        color: var(--font)
+    }
+}
+
+.filled {
+    @include buttonStyles;
+    background-color: var(--font);
+
+    &:disabled {
+        background-color: var(--fontGrayLight);
+        color: var(--fontGray);
+        cursor: not-allowed;
+    }
+
+    &:hover:not(:disabled) {
+        background-color: var(--fontLight);
+    }
+}
+
+.main {
+    @include buttonStyles;
+    background-color: var(--bgPurple);
+
+    &:hover {
+        background-color: var(--bgPurpleLight);
+    }
+}
+
+.link {
+    font-family: inherit;
+    cursor: pointer;
+    transition: .3s ease;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    color: var(--fontGray);
+    padding: 0;
+
+    &:hover {
+        color: var(--bgPurple);
+    }
+}

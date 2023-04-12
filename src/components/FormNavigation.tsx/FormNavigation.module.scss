@@ -1,0 +1,17 @@
+.formNavigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .formNavigation {
+        padding: 1rem;
+        position: fixed;
+        inset: auto 0 0;
+        z-index: 1;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px 25px, rgba(0, 0, 0, 0.04) 0px 10px 10px 10px;
+    }
+}

@@ -1,0 +1,103 @@
+.plansContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.planCard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--fontGrayLight);
+    cursor: pointer;
+    transition: .3s ease;
+    box-sizing: border-box;
+
+    &:hover {
+        border: 1px solid var(--bgPurple);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+
+    $imageSize: 2.25rem;
+    img {
+        // Icon
+        height: $imageSize;
+        min-height: $imageSize;
+        width: $imageSize;
+        min-width: $imageSize;
+    }
+
+    >div {
+        >span:first-of-type {
+            // Title
+            font-weight: 500;
+            margin: 2.25rem 0 0;
+            display: block;
+        }
+
+        >span:last-of-type {
+            // Price
+            color: var(--fontGray);
+            font-size: 0.875rem;
+        }
+
+        >p {
+            color: var(--font);
+            font-size: 0.75rem;
+            margin: 4px 0 0;
+        }
+    }
+}
+
+.selected {
+    background-color: var(--bgPurpleLighter);
+    border: 1px solid var(--bgPurple);
+}
+
+.periodSelection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 1.5rem;
+    color: var(--fontGray);
+    transition: .3s ease;
+    font-size: 0.875rem;
+    font-weight: 500;
+    background-color: var(--bgSoft);
+    border-radius: 10px;
+    margin: 2rem 0 0;
+}
+
+.periodActive {
+    color: var(--font);
+}
+
+@media only screen and (max-width: 600px) {
+    .plansContainer {
+        flex-direction: column;
+    }
+
+    .planCard {
+        width: 100%;
+        flex-direction: row;
+        gap: 1rem;
+
+        >div {
+            span {
+                margin: 0 !important;
+            }
+        }
+    }
+
+    // .periodSelection {
+    //     padding: 2rem 1rem 0;
+    // }
+}
