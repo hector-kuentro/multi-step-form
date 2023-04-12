@@ -45,7 +45,7 @@ export const ALL_ADD_ONS: Array<AddOn> = [
     },
     {
         id: 2,
-        title: 'Largert storage',
+        title: 'Larger storage',
         description: 'Extra 1TB of cloud storage',
         price: {
             monthly: 2,
